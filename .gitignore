@@ -1,0 +1,22 @@
+# Web Dashboard
+web-dashboard/node_modules/
+web-dashboard/.next/
+web-dashboard/out/
+web-dashboard/.env*.local
+
+# Database
+*.db
+*.db-journal
+
+# MetaTrader 5
+*.ex5
+*.log
+
+# System
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
