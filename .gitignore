@@ -20,3 +20,15 @@ Desktop.ini
 # IDE
 .vscode/
 .idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+.venv/
+
+# Next.js
+web-dashboard/.next/
+web-dashboard/node_modules/

@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
-// Simple in-memory storage (Resets on server restart)
-// In production, use a database.
+// For ticks, we use a global variable (since we don't necessarily need to persist every single tick to DB for the dashboard stats)
+// But we keep it simple for now. 
 let latestTick = {
   symbol: 'XAUUSD',
   bid: 0,
@@ -14,13 +14,12 @@ let latestTick = {
 export async function POST(request: Request) {
   try {
     const data = await request.json();
-    
-    // Update state
+
     latestTick = {
       ...data,
       timestamp: Date.now(),
     };
-    
+
     return NextResponse.json({ success: true });
   } catch (error) {
     return NextResponse.json({ success: false, error: 'Invalid JSON' }, { status: 400 });

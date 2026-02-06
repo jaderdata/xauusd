@@ -1,0 +1,9 @@
+{
+    "name": "xauusd-pro-system",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "npm run dev --prefix web-dashboard",
+        "bridge": "cd web-dashboard && python bridge.py",
+        "start": "npm run dev"
+    }
+}
